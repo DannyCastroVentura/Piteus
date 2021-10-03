@@ -1,0 +1,7 @@
+Docker:
+
+Create image:
+    docker build -t piteus:1.0 .
+
+Run image:
+    docker run --name piteus -p 3001:3001 piteus:1.0

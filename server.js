@@ -11,8 +11,8 @@ app.use(express.static(__dirname + '/public'));
 
 app.engine('html', require('ejs').renderFile);
 
-app.listen(3000, ()=> {
-    console.log("Server started on port 3000");
+app.listen(3001, ()=> {
+    console.log("Server started on port 3001");
 });
 
 app.get("/", (req, res) => {

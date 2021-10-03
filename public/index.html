@@ -622,7 +622,7 @@
             const mensagem = document.getElementById("mensagem-id").value;
             const body = JSON.stringify({nome: nome, contacto: contacto, email: email, hora: hora, nPessoas: nPessoas, mensagem: mensagem});
             console.log(body);
-            return fetch('http://localhost:3000/enviarEmail', {
+            return fetch('http://localhost:3001/enviarEmail', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: body,
