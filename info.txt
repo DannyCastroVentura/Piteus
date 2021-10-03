@@ -1,7 +1,17 @@
 Docker:
 
-Create image:
-    docker build -t piteus:1.0 .
+You have two choices: you can create the image and then run it; or just run the docker-compose file that will run the image in cloud (for this you only need to have the docker-compose.yml file provided, docker will handle the rest).
 
-Run image:
-    docker run --name piteus -p 3001:3001 piteus:1.0
+1º Option:
+
+    Create image:
+        docker build -t piteus:1.0 .
+
+    Run image:
+        docker run --name piteus -p 3001:3001 piteus:1.0
+
+
+2º Option:
+
+    Run docker-compose file:
+        docker-compose up
