@@ -1,8 +1,8 @@
 Docker:
 
-You have two choices: you can create the image and then run it; or just run the docker-compose file that will run the image in cloud (for this you only need to have the docker-compose.yml file provided, docker will handle the rest).
+You have two choices: you can create the image and then run it; or just run the docker-compose file that will run the image in cloud (for this you only need to have the docker-compose.yml file provided in your computer, docker will handle the rest).
 
-1º Option:
+1º Option (need to be in the same directory of the Dockerfile file provided):
 
     Create image:
         docker build -t piteus:1.0 .
@@ -11,7 +11,7 @@ You have two choices: you can create the image and then run it; or just run the 
         docker run --name piteus -p 3001:3001 piteus:1.0
 
 
-2º Option:
+2º Option (need to be in the same directory of the docker-compose.yml file provided):
 
     Run docker-compose file:
         docker-compose up
