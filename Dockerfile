@@ -9,6 +9,9 @@ WORKDIR /
 # Install the Project Dependencies like Express Framework
 RUN npm install
 
+# Making the max old space size equals to 8 gbs but keeps going down after some time :\
+# RUN export NODE_OPTIONS="--max-old-space-size=8192"
+
 # Tell that this image is going to Open a Port 
 EXPOSE 3001
 
