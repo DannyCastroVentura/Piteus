@@ -1,3 +1,3 @@
 # Piteus
 
-Can be runned with Docker, it will be deployed in port 3001
+Can be runned with the Dockerfile provided, it will be deployed on port 3001.
