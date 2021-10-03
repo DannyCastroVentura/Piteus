@@ -16,4 +16,4 @@ RUN npm install
 EXPOSE 3001
 
 # Default Command to launch the Application
-CMD ["npm", "test"]
+CMD ["npm", "start"]

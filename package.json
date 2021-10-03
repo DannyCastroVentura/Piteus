@@ -4,8 +4,8 @@
   "description": "projeto para passar o tempo",
   "main": "server.js",
   "scripts": {
-    "test": "nodemon server.js",
-    "start": "node server.js"
+    "test": "nodemon --max_old_space_size=8048 server.js",
+    "start": "node --max_old_space_size=8048 server.js"
   },
   "author": "Daniel Castro Ventura",
   "license": "ISC",
