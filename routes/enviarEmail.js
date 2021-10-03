@@ -25,9 +25,6 @@ module.exports = (app) => {
       const mensagem = req.body.mensagem;
       
       const text = "Nome: " + nome + "\n" + "Contacto: " + contacto + "\nEmail: " + email + "\nHora: " + hora + "\nNúmero de pessoas: " + nPessoas + "\nMensagem: " + mensagem;
-      console.log(text);
-      console.log(SMPT_CONFIG.user);
-      console.log(SMPT_CONFIG.pass);
       const reserva = await transporter.sendMail({
         text: text,
         subject: 'Pedido de reserva de ' + nome,
@@ -40,7 +37,7 @@ module.exports = (app) => {
       const resposta = await transporter.sendMail({
         text: "Pedido de reserva recebido, assim que for analisado será enviada uma resposta de confirmação!\n\nCumprimentos,\n\nPitéus - email automático.",
         subject: 'Resposta automática à sugestão enviada ao Hollywood',
-        from: nome,
+        from: 'emaildetesteprofissional@gmail.com',
         to: [email]
       });
       console.log(resposta);
