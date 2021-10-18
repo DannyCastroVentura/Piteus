@@ -36,7 +36,7 @@ module.exports = (app) => {
 
       const resposta = await transporter.sendMail({
         text: "Pedido de reserva recebido, assim que for analisado será enviada uma resposta de confirmação!\n\nCumprimentos,\n\nPitéus - email automático.",
-        subject: 'Resposta automática à sugestão enviada ao Hollywood',
+        subject: 'Resposta automática ao pedido de reserva no restaurante Pitéus',
         from: 'emaildetesteprofissional@gmail.com',
         to: [email]
       });
