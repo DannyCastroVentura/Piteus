@@ -483,7 +483,7 @@
                     <h4 class="widget-title">Reservas</h4>
                     <div class="contacto-form">
                         <table style="width: 100%;">
-                            <form onsubmit="return enviarReserva();">
+                            <form onsubmit="enviarReserva();">
                                 <tbody>
                                     <tr>
                                         <td style="padding-right: 0.5em;">
@@ -624,7 +624,6 @@
             const nPessoas = document.getElementById("nPessoas-id").value;
             const mensagem = document.getElementById("mensagem-id").value;
             const body = JSON.stringify({nome: nome, contacto: contacto, email: email, hora: hora, nPessoas: nPessoas, mensagem: mensagem});
-            console.log(body);
             return fetch('http://' + baseUrl + ':3001/enviarEmail', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -635,10 +634,6 @@
                 console.log(data);
                 console.log("Recebeu");
                 return true;
-            })
-            .catch((err) => {
-                console.log(err);
-                return false;
             });
         }
 
