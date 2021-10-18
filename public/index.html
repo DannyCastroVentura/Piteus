@@ -582,6 +582,9 @@
     <script src="js/custom.js"></script>
     <script type="text/javascript">
 
+    const locationHost = location.host.split(":");
+    const baseUrl = locationHost[0];
+
         function initialize() {
             var mapOptions = {
                 scrollwheel: true,
@@ -622,7 +625,7 @@
             const mensagem = document.getElementById("mensagem-id").value;
             const body = JSON.stringify({nome: nome, contacto: contacto, email: email, hora: hora, nPessoas: nPessoas, mensagem: mensagem});
             console.log(body);
-            return fetch('http://localhost:3001/enviarEmail', {
+            return fetch('http://' + baseUrl + ':3001/enviarEmail', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: body,
