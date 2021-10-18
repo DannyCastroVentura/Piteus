@@ -1,6 +1,6 @@
 services:
-    webApp:
-        container_name: piteus_webApp
+    piteus:
+        container_name: piteus
         image: dannycastroventura/piteus:latest
         ports:
             - 3001:3001
