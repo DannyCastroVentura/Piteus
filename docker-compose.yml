@@ -1,6 +1,6 @@
 services:
     piteus:
         container_name: piteus
-        image: dannycastroventura/piteus:latest
+        image: dannycastroventura/piteus
         ports:
             - 3001:3001
